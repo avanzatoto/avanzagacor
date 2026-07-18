@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
 
     <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -533,14 +533,16 @@
                 grid-template-columns: 1fr;
                 gap: 25px;
                 padding: 15px;
-                justify-items: center;
+                justify-items: center; /* Memastikan isi grid container rata tengah */
             }
 
             .center-area {
                 grid-row: 1;
                 width: 100%;
-                align-items: center;
-                justify-self: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Memasukkan elemen logo & login card ke tengah */
+                justify-content: center;
             }
 
             .sidebar {
@@ -567,7 +569,9 @@
             }
 
             .login-card-wrapper {
-                width: min(100%, 440px);
+                width: 100%;
+                max-width: 440px;
+                margin: 0 auto; /* Margin auto horizontal */
             }
 
             .info-bar {
@@ -585,15 +589,21 @@
                 justify-items: center;
             }
 
+            .brand-logo {
+                width: 100%;
+                align-items: center;
+            }
+
             .brand-title {
                 font-size: 34px;
                 letter-spacing: 4px;
+                text-align: center;
             }
 
             .login-card-wrapper {
-                width: calc(100% - 8px);
+                width: 92%; /* Memberikan sedikit ruang sisi kiri/kanan agar rapi di mobile */
                 max-width: 420px;
-                margin: 0 auto;
+                margin: 0 auto !important; /* Paksa posisi berada di center absolute grid */
             }
 
             /* Menyesuaikan padding saat di layar HP */
