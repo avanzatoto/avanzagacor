@@ -263,7 +263,7 @@
             width: max-content; 
             gap: 40px; 
             padding-right: 40px; 
-            animation: continuousLoop 15s linear infinite;
+            animation: continuousLoop 18s linear infinite;
         }
 
         .marquee-item {
@@ -286,15 +286,13 @@
         .login-card-wrapper {
             width: 100%;
             max-width: 440px;
-            /* Bingkai Animasi Emas */
             background: var(--gold-shine-gradient);
             background-size: 200% auto;
             animation: shineLightEffect 3s linear infinite;
-            
-            border-radius: 26px; /* Lebih besar dari kotak dalam untuk efek bingkai */
-            padding: 2px; /* Angka ini menentukan KETEBALAN bingkai (2px) */
-            
+            border-radius: 26px;
+            padding: 2px;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), var(--gold-glow);
+            margin: 0 auto;
         }
 
         /* --- KOTAK LOGIN BAGIAN DALAM (FOTO) --- */
@@ -307,8 +305,7 @@
             background-position: center;
             background-repeat: no-repeat;
             overflow: hidden; 
-            
-            border-radius: 24px; /* Sudut disesuaikan dengan wrapper luar */
+            border-radius: 24px;
             padding: 40px 35px;
             text-align: center;
         }
@@ -357,7 +354,6 @@
             text-shadow: 0 0 8px rgba(212,175,55,0.4);
         }
 
-        /* Login Button */
         .btn-login {
             width: 100%;
             padding: 16px;
@@ -502,10 +498,6 @@
             transform: translateY(-3px);
         }
 
-        /* ========================================================== */
-        /* --- HIGH LEVEL EFFECT ANIMATIONS --- */
-        /* ========================================================== */
-        
         @keyframes continuousLoop {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
@@ -541,10 +533,14 @@
                 grid-template-columns: 1fr;
                 gap: 25px;
                 padding: 15px;
+                justify-items: center;
             }
 
             .center-area {
-                grid-row: 1; 
+                grid-row: 1;
+                width: 100%;
+                align-items: center;
+                justify-self: center;
             }
 
             .sidebar {
@@ -570,6 +566,10 @@
                 padding: 14px 16px;
             }
 
+            .login-card-wrapper {
+                width: min(100%, 440px);
+            }
+
             .info-bar {
                 flex-direction: column;
                 align-items: flex-start;
@@ -580,14 +580,27 @@
         }
 
         @media (max-width: 480px) {
+            .container {
+                padding: 12px;
+                justify-items: center;
+            }
+
             .brand-title {
                 font-size: 34px;
                 letter-spacing: 4px;
             }
+
+            .login-card-wrapper {
+                width: calc(100% - 8px);
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
             /* Menyesuaikan padding saat di layar HP */
             .login-card {
-                padding: 30px 20px;
+                padding: 30px 18px;
             }
+
             .bank-logos {
                 gap: 15px;
             }
@@ -665,10 +678,10 @@
                 
                 <div class="marquee-wrapper">
                     <div class="marquee-content">
-                        <span class="marquee-item">SITUS TOTO ONLINE | BANDAR TOGEL TERPERCAYA | LIVE GAMES ONLINE DAN SPORTS</span>
-                        <span class="marquee-item">SITUS TOTO ONLINE | BANDAR TOGEL TERPERCAYA | LIVE GAMES ONLINE DAN SPORTS</span>
-                        <span class="marquee-item">SITUS TOTO ONLINE | BANDAR TOGEL TERPERCAYA | LIVE GAMES ONLINE DAN SPORTS</span>
-                        <span class="marquee-item">SITUS TOTO ONLINE | BANDAR TOGEL TERPERCAYA | LIVE GAMES ONLINE DAN SPORTS</span>
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
                     </div>
                 </div>
             </div>
